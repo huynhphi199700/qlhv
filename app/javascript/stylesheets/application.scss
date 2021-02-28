@@ -1,0 +1,11 @@
+@import 'bootstrap/scss/bootstrap';
+@import './home/scss/styles.scss';
+@import './home/scss/masthead.scss';
+@import './home/scss/navbar.scss';
+body {
+    background-color: #bdc3c7;
+}
+
+* {
+    box-sizing: border-box;
+}
