@@ -1,0 +1,46 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Users</h1>
+<table class="table">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>FullName</th>
+      <th>Short name</th>
+      <th>Class name</th>
+      <th>Birthday</th>
+      <th>Email</th>
+      <th>Contact</th>
+      <th>Identify card</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @users.each_with_index do |user, index| %>
+      <tr>
+      <td><%= link_to index + 1, user_path(user) %></td>
+        <td><%= user.fullname %></td>
+        <td><%= user.short_name %></td>
+        <td><%= user.class_name %></td>
+        <td><%= user.birthday.strftime('%d/%m/%Y') %></td>
+        <td><%= user.email %></td>
+        <td><%= user.contact %></td>
+        <td><%= user.identify_card %></td>
+        <td>
+          <a href="<%= edit_user_path(user) %>">
+          <i class="fas fa-edit"></i>
+          </a>
+        </td>
+        <td>
+          <a href="<%= edit_user_path(user) %>" data-method='delete' data-confirm='Are you sure?'>
+          <i class="fas fa-trash-alt"></i>
+          </a>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New User', new_user_path %>

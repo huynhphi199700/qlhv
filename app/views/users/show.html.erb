@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>First n:</strong>
+  <%= @user.first_n %>
+</p>
+
+<p>
+  <strong>Last n:</strong>
+  <%= @user.last_n %>
+</p>
+
+<p>
+  <strong>Short name:</strong>
+  <%= @user.short_name %>
+</p>
+
+<p>
+  <strong>Class name:</strong>
+  <%= @user.class_name %>
+</p>
+
+<p>
+  <strong>Birthday:</strong>
+  <%= @user.birthday %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @user.email %>
+</p>
+
+<p>
+  <strong>Contact:</strong>
+  <%= @user.contact %>
+</p>
+
+<p>
+  <strong>Identify card:</strong>
+  <%= @user.identify_card %>
+</p>
+
+<%= link_to 'Edit', edit_user_path(@user) %> |
+<%= link_to 'Back', users_path %>
